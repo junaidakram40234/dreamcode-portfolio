@@ -44,7 +44,7 @@ const Page3 = () => {
       <div className="h-[20%] w-full">
         <div className="h-[50%] w-full flex items-center justify-center">
           <ShinyText
-            className="text-6xl font-bold h-full w-full text-center flex items-center justify-center"
+            className="text-[clamp(28px,4vw,60px)] font-bold h-full w-full text-center flex items-center justify-center"
             text="Technologies I Work With"
             speed={2}
             delay={0}
@@ -75,7 +75,7 @@ const Page3 = () => {
       <div className="h-[20%] w-full mt-10">
         <div className="h-[50%] w-full flex items-center justify-center">
           <ShinyText
-            className="text-6xl font-bold h-full w-full text-center flex items-center justify-center"
+            className=" font-bold h-full w-full text-[clamp(28px,4vw,60px)] text-center flex items-center justify-center"
             text="Companies I Work With"
             speed={2}
             delay={0}

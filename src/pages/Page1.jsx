@@ -85,7 +85,14 @@ const Page1 = () => {
             interactive={false}
           />
         </div>
-        <div className="absolute h-full w-full top-0 left-0 z-30 flex items-center justify-center ">
+        <div
+          className="absolute h-full w-full top-0 left-0 z-30 flex items-center justify-center transform
+    scale-100
+    max-[375px]:scale-[0.60]
+    max-[425px]:scale-[0.70]
+    transition-transform
+    duration-300"
+        >
           <ProfileCard
             className="mt-20"
             name="Javi A. Torres"
