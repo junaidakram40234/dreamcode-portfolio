@@ -1,5 +1,6 @@
 import React from 'react'
 import FlowingMenu from '../Components/FlowingMenu.jsx'
+import About from "../pages/About.jsx"
 
 const Page2 = () => {
     const demoItems = [
@@ -10,7 +11,7 @@ const Page2 = () => {
           "https://plus.unsplash.com/premium_photo-1684769161054-2fa9a998dcb6?q=80&w=1504&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        link: "#",
+        link: "/about",
         text: "About",
         image:
           "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

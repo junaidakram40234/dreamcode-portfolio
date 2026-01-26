@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import { useNavigate } from "react-router-dom";
+
 
 function FlowingMenu({
   items = [],
@@ -30,7 +32,7 @@ function FlowingMenu({
   );
 }
 
-function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor, isFirst }) {
+function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor, isFirst }) { const navigate = useNavigate();
   const itemRef = useRef(null);
   const marqueeRef = useRef(null);
   const marqueeInnerRef = useRef(null);
@@ -117,17 +119,18 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
     <div
       className="flex-1 relative overflow-hidden text-center"
       ref={itemRef}
-      style={{ borderTop: isFirst ? 'none' : `1px solid ${borderColor}` }}
+      style={{ borderTop: isFirst ? "none" : `1px solid ${borderColor}` }}
     >
-      <a
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-[4vh]"
-        href={link}
+      <div
+        className="flex items-center justify-center h-full relative cursor-pointer uppercase font-semibold text-[4vh]"
+        onClick={() => navigate(link)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ color: textColor }}
       >
         {text}
-      </a>
+      </div>
+
       <div
         className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none translate-y-[101%]"
         ref={marqueeRef}
@@ -135,8 +138,14 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
       >
         <div className="h-full w-fit flex" ref={marqueeInnerRef}>
           {[...Array(repetitions)].map((_, idx) => (
-            <div className="marquee-part flex items-center flex-shrink-0" key={idx} style={{ color: marqueeTextColor }}>
-              <span className="whitespace-nowrap uppercase font-normal text-[4vh] leading-[1] px-[1vw]">{text}</span>
+            <div
+              className="marquee-part flex items-center flex-shrink-0"
+              key={idx}
+              style={{ color: marqueeTextColor }}
+            >
+              <span className="whitespace-nowrap uppercase font-normal text-[4vh] leading-[1] px-[1vw]">
+                {text}
+              </span>
               <div
                 className="w-[200px] h-[7vh] my-[2em] mx-[2vw] py-[1em] rounded-[50px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${image})` }}
