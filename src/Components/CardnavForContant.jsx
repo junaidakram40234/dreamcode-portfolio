@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from "react-icons/go";
 
-const CardNav = ({
+const CardnavForContant = ({
   logo,
   logoAlt = "Logo",
   items,
@@ -147,7 +147,7 @@ const CardNav = ({
       >
         <div className="card-nav-top absolute inset-x-0 top-0 h-15 flex items-center justify-between p-2 pl-[1.1rem] z-2">
           <div
-            className={`hamburger-menu ${isHamburgerOpen ? "open" : ""} group h-full flex flex-col items-center justify-center cursor-pointer gap-1.5 order-2 md:order-0`}
+            className={`hamburger-menu cursor-none cursor-target ${isHamburgerOpen ? "open" : ""} group h-full flex flex-col items-center justify-center gap-1.5 order-2 md:order-0`}
             onClick={toggleMenu}
             role="button"
             aria-label={isExpanded ? "Close menu" : "Open menu"}
@@ -172,7 +172,7 @@ const CardNav = ({
 
           <button
             type="button"
-            className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
+            className="card-nav-cta-button cursor-none cursor-target  hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Get Started
@@ -201,7 +201,7 @@ const CardNav = ({
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-1.5 no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
+                    className="nav-card-link cursor-none cursor-target inline-flex items-center gap-1.5 no-underline transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}
                   >
@@ -221,4 +221,4 @@ const CardNav = ({
   );
 };
 
-export default CardNav;
+export default CardnavForContant;

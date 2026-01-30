@@ -18,12 +18,12 @@ const Page2 = () => {
       },
       {
         link: "#",
-        text: "Show Case",
+        text: "Case Studies",
         image:
           "https://media.istockphoto.com/id/1356364230/photo/young-japanese-man-in-working-on-desktop-computer-diverse-multi-ethnic-team-of-programmers.jpg?s=2048x2048&w=is&k=20&c=UTRRAwrqPEgeWDW0avbTQ_9gfkmHyR-pJI860VZnmpk=",
       },
       {
-        link: "#",
+        link: "/contant",
         text: "Contant",
         image:
           "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

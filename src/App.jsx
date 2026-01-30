@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"
 import About from './pages/About.jsx';
 import Project from './pages/Project.jsx';
+import Contant from './pages/Contant.jsx';
+import Casestudies from './pages/Casestudies.jsx';
 
 
 const App = () => {
@@ -13,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/contant" element={<Contant />} />
       </Routes>
     </div>
   );
